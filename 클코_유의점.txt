@@ -1,0 +1,24 @@
+안티그래비티로 클로드코드 이용시 주의할 점
+
+
+1) 자동화에 목적을 둘 것
+
+- 간단한 글 쓰기, 기획 이런거는 클로드코드가 아니라 클로드로 해야함.
+이유 : 토큰이 금방 소진됨
+
+
+2) 채팅을 나가면 대화 저장이 안됨
+그렇기 때문에 지금 나눈 대화를 저장해달라고 꼭! 말해야함.
+그럼 파일 형태로 저장을 해줌
+
+
+https://github.com/강성자/백업
+git@github.com:강성자/백업.git
+
+git@github.com:bubuu1818-crypto/my-backup.git
+
+git config --global user.email "bubuu1818@gmail.com"
+git config --global user.email "본인의_이메일_주소"
+git config --global user.email "본인의_깃허브_이메일"
+
+https://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@github.com/bubuu1818-crypto/my-backup.git
