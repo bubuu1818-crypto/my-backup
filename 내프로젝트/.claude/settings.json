@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run *)",
+      "Bash(node *)",
+      "Read(*)",
+      "Write(src/*)",
+      "Write(output/*)"
+    ],
+    "deny": [
+      "Bash(rm -rf *)",
+      "Bash(git push *)"
+    ]
+  },
+  "env": {
+    "WORKING_DIR": "./src",
+    "OUTPUT_DIR": "./output",
+    "TEMPLATES_DIR": "./.claude/templates"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "templateId": "hook-card",
+  "role": "hook",
+  "layout": {
+    "imageRatio": "full-bleed",
+    "textPosition": "bottom-overlay",
+    "overlayOpacity": 0.6
+  },
+  "typography": {
+    "title": {
+      "size": "48px",
+      "weight": 700,
+      "maxChars": 10
+    }
+  },
+  "colors": {
+    "textColor": "--color-white",
+    "background": "linear-gradient(180deg, transparent 0%, var(--color-black-60) 100%)"
+  }
+}

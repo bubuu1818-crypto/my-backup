@@ -1,0 +1,22 @@
+{
+  "name": "card-news-carousel",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "ts-node index.ts",
+    "generate": "ts-node index.ts input/sample.txt",
+    "generate:samples": "ts-node index.ts input/sample.txt",
+    "build": "tsc",
+    "validate:tokens": "ts-node scripts/validateTokens.ts",
+    "test:visual": "ts-node scripts/testVisual.ts"
+  },
+  "dependencies": {
+    "puppeteer": "^24.42.0",
+    "zod": "^3.22.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "ts-node": "^10.9.0",
+    "typescript": "^5.0.0"
+  }
+}

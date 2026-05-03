@@ -1,0 +1,27 @@
+{
+  "templateId": "cta-card",
+  "role": "cta",
+  "layout": {
+    "imageRatio": "none",
+    "textPosition": "center-fill",
+    "overlayOpacity": 0
+  },
+  "typography": {
+    "title": {
+      "size": "36px",
+      "weight": 700,
+      "maxChars": 18
+    },
+    "button": {
+      "size": "20px",
+      "weight": 700,
+      "maxChars": 12
+    }
+  },
+  "colors": {
+    "textColor": "--color-gray-900",
+    "buttonTextColor": "--color-white",
+    "buttonBackground": "--color-primary",
+    "background": "--color-white"
+  }
+}

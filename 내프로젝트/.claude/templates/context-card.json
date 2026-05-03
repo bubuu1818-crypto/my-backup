@@ -1,0 +1,26 @@
+{
+  "templateId": "context-card",
+  "role": "context",
+  "layout": {
+    "imageRatio": "top-half",
+    "textPosition": "bottom-block",
+    "overlayOpacity": 0
+  },
+  "typography": {
+    "title": {
+      "size": "32px",
+      "weight": 700,
+      "maxChars": 20
+    },
+    "body": {
+      "size": "18px",
+      "weight": 400,
+      "maxChars": 60,
+      "maxLines": 3
+    }
+  },
+  "colors": {
+    "textColor": "--color-gray-900",
+    "background": "--color-white"
+  }
+}

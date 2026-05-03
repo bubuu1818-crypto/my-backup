@@ -1,0 +1,25 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//c/Users/컴퓨터/Desktop/**)",
+      "Bash(node -e ' *)",
+      "Read(//c/Users/컴퓨터/AppData/Roaming/**)",
+      "Read(//c/Program Files/**)",
+      "Bash(python /c/Users/컴퓨터/AppData/Local/Programs/Python/Python314/python.exe -c ' *)",
+      "Bash(\"/c/Users/컴퓨터/AppData/Local/Programs/Python/Python314/python.exe\" --version)",
+      "Bash(cmd.exe /c \"python --version\")",
+      "Bash(\"/c/Users/컴퓨터/AppData/Local/Programs/Python/Python314/python.exe\" scripts/precheck.py input/modoo-suyeon.txt)",
+      "Bash(npm --version)",
+      "Read(//c/Program Files \\(x86\\)/**)",
+      "Read(//c/Users/컴퓨터/AppData/**)",
+      "Bash(export PATH=\"/c/Program Files/nodejs:$PATH\")",
+      "Bash(npm install *)",
+      "Bash(npx ts-node *)",
+      "Bash(where node *)",
+      "Bash(powershell -Command \"[System.Environment]::GetEnvironmentVariable\\('Path', 'Machine'\\)\")",
+      "Bash(powershell -Command \"[System.Environment]::GetEnvironmentVariable\\('Path', 'User'\\)\")",
+      "Bash(powershell -Command \"& 'C:\\\\\\\\Program Files\\\\\\\\nodejs\\\\\\\\node.exe' --version\")",
+      "Read(//c/Users/컴퓨터/**)"
+    ]
+  }
+}

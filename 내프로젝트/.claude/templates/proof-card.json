@@ -1,0 +1,34 @@
+{
+  "templateId": "proof-card",
+  "role": "proof",
+  "layout": {
+    "imageRatio": "icon-only",
+    "textPosition": "center-fill",
+    "overlayOpacity": 0
+  },
+  "typography": {
+    "stat": {
+      "size": "72px",
+      "weight": 800,
+      "fontFamily": "SUIT",
+      "maxChars": 6
+    },
+    "label": {
+      "size": "18px",
+      "weight": 400,
+      "fontFamily": "Pretendard",
+      "maxChars": 20
+    },
+    "body": {
+      "size": "16px",
+      "weight": 400,
+      "maxChars": 60,
+      "maxLines": 3
+    }
+  },
+  "colors": {
+    "textColor": "--color-gray-900",
+    "statColor": "--color-primary",
+    "background": "--color-secondary"
+  }
+}

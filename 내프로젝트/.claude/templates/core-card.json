@@ -1,0 +1,26 @@
+{
+  "templateId": "core-card",
+  "role": "core",
+  "layout": {
+    "imageRatio": "none",
+    "textPosition": "center-fill",
+    "overlayOpacity": 0
+  },
+  "typography": {
+    "title": {
+      "size": "40px",
+      "weight": 800,
+      "maxChars": 18
+    },
+    "body": {
+      "size": "20px",
+      "weight": 500,
+      "maxChars": 60,
+      "maxLines": 3
+    }
+  },
+  "colors": {
+    "textColor": "--color-white",
+    "background": "--color-primary"
+  }
+}

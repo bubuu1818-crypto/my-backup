@@ -1,0 +1,375 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --color-primary: #2563eb;
+  --color-primary-hover: #1d4ed8;
+  --color-danger: #dc2626;
+  --color-success: #16a34a;
+  --color-ig: #e1306c;
+  --color-ig-hover: #c1185a;
+  --color-bg: #f8fafc;
+  --color-surface: #ffffff;
+  --color-border: #e2e8f0;
+  --color-text: #1e293b;
+  --color-muted: #64748b;
+  --radius: 8px;
+  --shadow: 0 1px 3px rgba(0,0,0,.08), 0 1px 2px rgba(0,0,0,.06);
+}
+
+body {
+  font-family: 'Malgun Gothic', 'Apple SD Gothic Neo', -apple-system, sans-serif;
+  background: var(--color-bg);
+  color: var(--color-text);
+  min-height: 100vh;
+}
+
+header {
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+  padding: 0 24px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+header h1 { font-size: 16px; font-weight: 600; }
+header .badge {
+  font-size: 11px;
+  padding: 2px 8px;
+  background: #dbeafe;
+  color: var(--color-primary);
+  border-radius: 20px;
+  font-weight: 500;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 420px 1fr;
+  gap: 0;
+  height: calc(100vh - 56px);
+}
+
+/* 왼쪽 폼 패널 */
+.form-panel {
+  background: var(--color-surface);
+  border-right: 1px solid var(--color-border);
+  overflow-y: auto;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.form-section h2 {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  color: var(--color-muted);
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+label span.req { color: var(--color-danger); }
+label small { font-weight: 400; color: var(--color-muted); font-size: 11px; }
+
+input[type=text], input[type=url], textarea, select {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  font-size: 13px;
+  font-family: inherit;
+  background: var(--color-bg);
+  color: var(--color-text);
+  transition: border-color .15s;
+  outline: none;
+}
+
+input:focus, textarea:focus, select:focus {
+  border-color: var(--color-primary);
+  background: #fff;
+}
+
+textarea { resize: vertical; min-height: 80px; }
+
+.row-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.row-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; }
+
+/* 포인트 리스트 */
+.points-list { display: flex; flex-direction: column; gap: 6px; }
+.point-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.point-item input { flex: 1; }
+.btn-remove {
+  width: 28px; height: 28px;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  background: transparent;
+  cursor: pointer;
+  color: var(--color-muted);
+  font-size: 16px;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+  transition: all .15s;
+}
+.btn-remove:hover { border-color: var(--color-danger); color: var(--color-danger); }
+
+.btn-add-point {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border: 1px dashed var(--color-border);
+  border-radius: var(--radius);
+  background: transparent;
+  color: var(--color-muted);
+  font-size: 13px;
+  cursor: pointer;
+  width: fit-content;
+  transition: all .15s;
+}
+.btn-add-point:hover { border-color: var(--color-primary); color: var(--color-primary); }
+
+/* 플랫폼 체크박스 */
+.platform-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.platform-chip {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 10px;
+  border: 1px solid var(--color-border);
+  border-radius: 20px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all .15s;
+  user-select: none;
+}
+.platform-chip input { display: none; }
+.platform-chip.checked {
+  border-color: var(--color-primary);
+  background: #dbeafe;
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+/* 생성 버튼 */
+.btn-generate {
+  width: 100%;
+  padding: 12px;
+  background: var(--color-primary);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background .15s;
+  font-family: inherit;
+}
+.btn-generate:hover { background: var(--color-primary-hover); }
+.btn-generate:disabled { background: #94a3b8; cursor: not-allowed; }
+
+/* 오른쪽 결과 패널 */
+.result-panel {
+  overflow-y: auto;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.empty-state {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-muted);
+  gap: 8px;
+  text-align: center;
+}
+.empty-state .icon { font-size: 48px; opacity: .3; }
+.empty-state p { font-size: 14px; }
+
+/* 로딩 */
+.loading-bar {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 40px;
+  color: var(--color-muted);
+}
+.loading-bar.active { display: flex; }
+.spinner {
+  width: 32px; height: 32px;
+  border: 3px solid var(--color-border);
+  border-top-color: var(--color-primary);
+  border-radius: 50%;
+  animation: spin .8s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* 플랫폼 탭 */
+.platform-tabs {
+  display: flex;
+  gap: 4px;
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 0;
+}
+.tab-btn {
+  padding: 8px 14px;
+  border: none;
+  border-bottom: 2px solid transparent;
+  background: transparent;
+  font-size: 13px;
+  cursor: pointer;
+  color: var(--color-muted);
+  font-family: inherit;
+  margin-bottom: -1px;
+  transition: all .15s;
+}
+.tab-btn.active {
+  color: var(--color-primary);
+  border-bottom-color: var(--color-primary);
+  font-weight: 600;
+}
+
+/* 카드 그리드 */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 12px;
+}
+
+.card-thumb {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--color-surface);
+  box-shadow: var(--shadow);
+  transition: transform .15s, box-shadow .15s;
+}
+.card-thumb:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,.1);
+}
+.card-thumb img {
+  width: 100%;
+  display: block;
+  aspect-ratio: 1/1;
+  object-fit: contain;
+  background: #f1f5f9;
+}
+.card-thumb.story img { aspect-ratio: 9/16; }
+.card-thumb .card-label {
+  padding: 6px 10px;
+  font-size: 11px;
+  color: var(--color-muted);
+  border-top: 1px solid var(--color-border);
+}
+
+/* Instagram 등록 영역 */
+.ig-section {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.ig-section h3 {
+  font-size: 14px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ig-status {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: var(--color-muted);
+}
+.ig-status .dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: #94a3b8;
+}
+.ig-status.connected .dot { background: var(--color-success); }
+.ig-status.connected { color: var(--color-success); }
+.ig-status.error .dot { background: var(--color-danger); }
+.ig-status.error { color: var(--color-danger); }
+
+.btn-ig {
+  padding: 10px 20px;
+  background: var(--color-ig);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background .15s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: center;
+}
+.btn-ig:hover { background: var(--color-ig-hover); }
+.btn-ig:disabled { background: #94a3b8; cursor: not-allowed; }
+
+/* 알림 토스트 */
+.toast {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  padding: 12px 20px;
+  border-radius: var(--radius);
+  font-size: 13px;
+  font-weight: 500;
+  box-shadow: 0 4px 12px rgba(0,0,0,.15);
+  z-index: 999;
+  transform: translateY(80px);
+  opacity: 0;
+  transition: all .3s ease;
+}
+.toast.show { transform: translateY(0); opacity: 1; }
+.toast.success { background: #dcfce7; color: var(--color-success); border: 1px solid #bbf7d0; }
+.toast.error { background: #fee2e2; color: var(--color-danger); border: 1px solid #fecaca; }
+
+@media (max-width: 768px) {
+  main { grid-template-columns: 1fr; }
+  .form-panel { height: auto; }
+}
