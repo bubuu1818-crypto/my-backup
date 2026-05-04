@@ -22,3 +22,6 @@ git config --global user.email "본인의_이메일_주소"
 git config --global user.email "본인의_깃허브_이메일"
 
 https://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@github.com/bubuu1818-crypto/my-backup.git
+
+
+썸네일 디자인, 카드뉴스, 보도자료, 쇼츠, 인기영상제작 등 자동화를 매우 희망하고 매주 각 3편씩 안정적으로 업로드 하고 싶어
